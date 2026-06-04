@@ -181,6 +181,10 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
+            const name = document.getElementById('formName').value;
+            const email = document.getElementById('formEmail').value;
+            const message = document.getElementById('formMessage').value;
+            
             const btn = document.getElementById('submitBtn');
             const originalContent = btn.innerHTML;
             
@@ -188,18 +192,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite">
                     <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
                 </svg>
-                Sending...
+                Opening WhatsApp...
             `;
             btn.disabled = true;
             
+            // Construct the WhatsApp text
+            const whatsappText = `Hi Robin, my name is ${name} (${email}). Here is my message:\n\n${message}`;
+            const whatsappUrl = `https://wa.me/917736129782?text=${encodeURIComponent(whatsappText)}`;
+            
             setTimeout(() => {
+                // Open WhatsApp link in a new tab
+                window.open(whatsappUrl, '_blank', 'noopener');
+                
                 btn.innerHTML = `
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M20 6L9 17l-5-5"/>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;margin-right:8px;">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
                     </svg>
-                    Message Sent!
+                    Sent via WhatsApp!
                 `;
-                btn.style.background = 'linear-gradient(135deg, #10b981, #06b6d4)';
+                btn.style.background = '#128C7E';
                 
                 setTimeout(() => {
                     btn.innerHTML = originalContent;
@@ -207,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.disabled = false;
                     contactForm.reset();
                 }, 3000);
-            }, 1500);
+            }, 1000);
         });
     }
 

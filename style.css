@@ -493,9 +493,8 @@ body:hover .cursor-glow {
     width: auto;
     object-fit: contain;
     z-index: 2;
-    mix-blend-mode: screen;
-    mask-image: radial-gradient(ellipse at 50% 45%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%);
-    -webkit-mask-image: radial-gradient(ellipse at 50% 45%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
     transition: transform var(--transition-slow);
 }
 

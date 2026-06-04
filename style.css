@@ -1123,11 +1123,13 @@ body:hover .cursor-glow {
 .social-linkedin { background: rgba(0, 119, 181, 0.15); color: var(--accent-linkedin); }
 .social-instagram { background: rgba(228, 64, 95, 0.15); color: var(--accent-instagram); }
 .social-youtube { background: rgba(255, 0, 0, 0.15); color: var(--accent-youtube); }
+.social-github { background: rgba(255, 255, 255, 0.08); color: #fff; }
 
 .social-card:hover .social-spotify { background: rgba(29, 185, 84, 0.25); }
 .social-card:hover .social-linkedin { background: rgba(0, 119, 181, 0.25); }
 .social-card:hover .social-instagram { background: rgba(228, 64, 95, 0.25); }
 .social-card:hover .social-youtube { background: rgba(255, 0, 0, 0.25); }
+.social-card:hover .social-github { background: rgba(255, 255, 255, 0.15); }
 
 .social-info h3 {
     font-size: 0.95rem;

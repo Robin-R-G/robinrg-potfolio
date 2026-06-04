@@ -111,17 +111,26 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 animateCounter(entry.target);
-                counterObserver.unobserve(entry.target);
+            } else {
+                if (entry.target.animationId) {
+                    cancelAnimationFrame(entry.target.animationId);
+                    entry.target.animationId = null;
+                }
+                entry.target.textContent = '0';
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.1 });
 
     statNumbers.forEach(el => counterObserver.observe(el));
 
     function animateCounter(element) {
         const target = parseInt(element.dataset.count);
-        const duration = 2000;
+        const duration = 1500;
         const startTime = performance.now();
+        
+        if (element.animationId) {
+            cancelAnimationFrame(element.animationId);
+        }
 
         function update(currentTime) {
             const elapsed = currentTime - startTime;
@@ -134,13 +143,14 @@ document.addEventListener('DOMContentLoaded', () => {
             element.textContent = current;
 
             if (progress < 1) {
-                requestAnimationFrame(update);
+                element.animationId = requestAnimationFrame(update);
             } else {
                 element.textContent = target;
+                element.animationId = null;
             }
         }
 
-        requestAnimationFrame(update);
+        element.animationId = requestAnimationFrame(update);
     }
 
     // ── Smooth Scroll for Anchor Links ──

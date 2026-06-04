@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     animatedElements.forEach(el => observer.observe(el));
 
     // ── Counter Animation ──
-    const statNumbers = document.querySelectorAll('.stat-number[data-count]');
+    const statNumbers = document.querySelectorAll('.stat-count[data-count], .stat-number[data-count]');
 
     const counterObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {

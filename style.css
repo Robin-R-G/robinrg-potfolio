@@ -257,7 +257,7 @@ body:hover .cursor-glow {
 .hero-orb-1 {
     width: 500px;
     height: 500px;
-    background: rgba(139, 92, 246, 0.12);
+    background: rgba(139, 92, 246, 0.03);
     top: -10%;
     right: -5%;
     animation-delay: 0s;
@@ -266,7 +266,7 @@ body:hover .cursor-glow {
 .hero-orb-2 {
     width: 400px;
     height: 400px;
-    background: rgba(6, 182, 212, 0.08);
+    background: rgba(6, 182, 212, 0.02);
     bottom: -15%;
     left: -10%;
     animation-delay: -7s;
@@ -275,7 +275,7 @@ body:hover .cursor-glow {
 .hero-orb-3 {
     width: 300px;
     height: 300px;
-    background: rgba(245, 158, 11, 0.06);
+    background: rgba(245, 158, 11, 0.015);
     top: 40%;
     left: 30%;
     animation-delay: -14s;
@@ -437,38 +437,69 @@ body:hover .cursor-glow {
     justify-content: center;
 }
 
-/* Hero Stats */
-.hero-stats {
+/* Hero Stats Grid */
+.hero-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+    max-width: 520px;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-md);
+    padding: 14px 18px;
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 14px;
+    transition: all var(--transition-base);
 }
 
-.stat {
-    text-align: center;
+.stat-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--border-hover-color);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-.stat-number {
+.stat-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.03);
+    transition: all var(--transition-fast);
+}
+
+.stat-card:hover .stat-card-icon {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.stat-card-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-card-number {
     display: block;
     font-family: var(--font-display);
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: var(--text-primary);
     line-height: 1.2;
 }
 
-.stat-label {
+.stat-card-label {
     font-size: 0.75rem;
     color: var(--text-muted);
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.05em;
     font-weight: 500;
-}
-
-.stat-divider {
-    width: 1px;
-    height: 32px;
-    background: var(--border-subtle);
 }
 
 /* Hero Visual */
@@ -502,30 +533,9 @@ body:hover .cursor-glow {
     transform: translateY(-8px) scale(1.02);
 }
 
-/* Glowing background shapes */
+/* Glowing background shapes disabled to remove glossy effect */
 .hero-shape {
-    position: absolute;
-    border-radius: 50%;
-    z-index: 1;
-    filter: blur(80px);
-    opacity: 0.15;
-    pointer-events: none;
-}
-
-.hero-shape-1 {
-    width: 280px;
-    height: 280px;
-    background: var(--accent-primary);
-    top: 20%;
-    left: 20%;
-}
-
-.hero-shape-2 {
-    width: 320px;
-    height: 320px;
-    background: var(--accent-secondary);
-    bottom: 10%;
-    right: 10%;
+    display: none;
 }
 
 /* Music Visualizer */

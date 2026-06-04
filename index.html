@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robin R G — Musician | Developer | Creator</title>
+    <meta name="description" content="Robin R G is a Christian music artist, developer, and creative mind. Explore his music, projects, and connect with him.">
+    <meta property="og:title" content="Robin R G — Portfolio">
+    <meta property="og:description" content="Christian music artist, developer, and creative. Listen to his music on Spotify.">
+    <meta property="og:image" content="https://i.scdn.co/image/ab6761610000e5ebf69482370bfb35297fa39d6f">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-r">R</span>obin<span class="logo-dot">.</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#music" class="nav-link">Music</a></li>
+                <li><a href="#discography" class="nav-link">Discography</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-effects">
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge" data-animate="fade-up">
+                    <span class="badge-dot" style="background:#1DB954;"></span>
+                    Verified Musical Artist on Spotify & YouTube
+                </div>
+                <h1 class="hero-title" data-animate="fade-up" data-delay="100">
+                    <span class="hero-line">Hi, I'm</span>
+                    <span class="hero-name">Robin R G<svg viewBox="0 0 24 24" width="24" height="24" fill="#06b6d4" style="display:inline-block;vertical-align:middle;margin-left:10px;filter:drop-shadow(0 0 6px rgba(6,182,212,0.6));" title="Verified Musical Artist"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><span class="hero-accent">.</span></span>
+                </h1>
+                <p class="hero-description" data-animate="fade-up" data-delay="200">
+                    A B.Tech graduate in Electronics & Communication Engineering from RIET, former IEEE COMSOC SBC Chairperson & Graphic Designer, 
+                    and a passionate Christian music artist promoting God's glory through melodies.
+                </p>
+                <div class="hero-actions" data-animate="fade-up" data-delay="300">
+                    <a href="https://open.spotify.com/artist/6SaA1ADzXWprxPQKBVqjNL" target="_blank" rel="noopener" class="btn btn-primary" id="listenBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                        </svg>
+                        Listen on Spotify
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        Get in Touch
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hero-stats" data-animate="fade-up" data-delay="400">
+                    <div class="stat">
+                        <span class="stat-number" data-count="7">0</span>
+                        <span class="stat-label">Releases</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="76">0</span>
+                        <span class="stat-label">Followers</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="30">0</span>
+                        <span class="stat-label">Monthly Listeners</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual" data-animate="fade-left" data-delay="200">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-ring"></div>
+                    <div class="hero-image-ring hero-image-ring-2"></div>
+                    <img src="assets/profile.jpg" alt="Robin R G" class="hero-image" id="heroImage" onerror="this.onerror=null;this.src='https://i.scdn.co/image/ab6761610000e5ebf69482370bfb35297fa39d6f';">
+                    <div class="hero-image-glow"></div>
+                </div>
+                <!-- Floating music notes -->
+                <div class="floating-note note-1">♪</div>
+                <div class="floating-note note-2">♫</div>
+                <div class="floating-note note-3">♬</div>
+            </div>
+        </div>
+        <div class="scroll-indicator" data-animate="fade-up" data-delay="500">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">The Story Behind<br>the <span class="gradient-text">Music & Code</span></h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text" data-animate="fade-right">
+                    <div class="about-quote">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.3">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                        </svg>
+                        <blockquote>
+                            "Music is God's best gift to man, the only art of heaven given to earth."
+                        </blockquote>
+                    </div>
+                    <p class="about-description">
+                        I'm Robin R G — a graduate in Electronics & Communication Engineering (ECE) from Rajadhani Institute of Engineering and Technology (RIET), a graphic designer, and a Christian music artist. My music is a testament to unwavering faith and devotion, offering hope and peace through melodies.
+                    </p>
+                    <p class="about-description">
+                        In the tech space, I explore hardware-software integrations, embedded systems, microcontrollers, and creative digital designs. Having served as the Chairperson of the IEEE COMSOC Student Branch Chapter and a Graphic Designer for IEEE SB RIET, I have a proven track record of leadership, hosting technical workshops, and designing branding materials.
+                    </p>
+                    <div class="about-tags">
+                        <span class="tag">🎵 Music Production</span>
+                        <span class="tag">🎸 Instrumentals</span>
+                        <span class="tag">⚡ Electronics & ECE</span>
+                        <span class="tag">🌐 IEEE Leadership</span>
+                        <span class="tag">🎨 Graphic Design</span>
+                        <span class="tag">💻 Web Development</span>
+                        <span class="tag">✝️ Christian Devotional</span>
+                    </div>
+                </div>
+                <div class="about-visual" data-animate="fade-left">
+                    <div class="about-card-stack">
+                        <div class="about-card about-card-1">
+                            <div class="card-icon">🎵</div>
+                            <h3>Verified Music Artist</h3>
+                            <p>Verified Musical Artist on Spotify & YouTube. Creating devotional covers and original tracks.</p>
+                        </div>
+                        <div class="about-card about-card-2">
+                            <div class="card-icon">⚡</div>
+                            <h3>ECE Engineer</h3>
+                            <p>Completed Bachelor of Technology (B.Tech) in Electronics & Communication at RIET</p>
+                        </div>
+                        <div class="about-card about-card-3">
+                            <div class="card-icon">🌐</div>
+                            <h3>IEEE Leader</h3>
+                            <p>Former Chairperson of IEEE COMSOC SBC & Graphic Designer for IEEE SB RIET</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Achievements Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Achievements & Roles</span>
+                <h2 class="section-title">Engineering, Innovation<br>and <span class="gradient-text">Leadership</span></h2>
+            </div>
+            
+            <div class="experience-grid">
+                <!-- Column 1: Projects & Achievements -->
+                <div class="exp-column" data-animate="fade-right">
+                    <h3 class="column-title">🏆 Innovation & Research</h3>
+                    <div class="exp-timeline">
+                        
+                        <div class="timeline-card">
+                            <div class="timeline-badge award">Award</div>
+                            <span class="timeline-date">YIP 8.0</span>
+                            <h4>District Level Winner</h4>
+                            <p class="timeline-subtitle">Young Innovators Programme (YIP)</p>
+                            <p class="timeline-desc">Recognized at the district level for developing innovative engineering solutions under the flagship state innovation program.</p>
+                        </div>
+                        
+                        <div class="timeline-card">
+                            <div class="timeline-badge award">Award</div>
+                            <span class="timeline-date">YIP 7.0</span>
+                            <h4>State Level Winner</h4>
+                            <p class="timeline-subtitle">Young Innovators Programme (YIP)</p>
+                            <p class="timeline-desc">Awarded state-level winner status for conceptualizing and designing a high-impact technical solution to address real-world challenges.</p>
+                        </div>
+                        
+                        <div class="timeline-card">
+                            <div class="timeline-badge research">Paper</div>
+                            <span class="timeline-date">Conference Presentation</span>
+                            <h4>Conference Paper Presentation</h4>
+                            <p class="timeline-subtitle">Electronics & Communication Engineering</p>
+                            <p class="timeline-desc">Successfully presented a peer-reviewed research paper detailing advanced concepts in ECE systems and hardware applications.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Column 2: Positions & Volunteering -->
+                <div class="exp-column" data-animate="fade-left">
+                    <h3 class="column-title">💼 Leadership & Volunteering</h3>
+                    <div class="exp-timeline">
+                        
+                        <div class="timeline-card">
+                            <div class="timeline-badge leadership">IEEE</div>
+                            <span class="timeline-date">Past Role</span>
+                            <h4>Chairperson — IEEE COMSOC SBC</h4>
+                            <p class="timeline-subtitle">RIET Student Branch Chapter</p>
+                            <p class="timeline-desc">Led the Communications Society Student Branch Chapter, coordinating tech workshops, technical seminars, and student developmental programs.</p>
+                        </div>
+                        
+                        <div class="timeline-card">
+                            <div class="timeline-badge design">Design</div>
+                            <span class="timeline-date">Past Role</span>
+                            <h4>Graphic Designer</h4>
+                            <p class="timeline-subtitle">IEEE Student Branch RIET</p>
+                            <p class="timeline-desc">Designed visual identities, event posters, newsletters, and promotional graphics for campaigns hosted by the college's IEEE Student Branch.</p>
+                        </div>
+                        
+                        <div class="timeline-card">
+                            <div class="timeline-badge volunteer">Volunteer</div>
+                            <span class="timeline-date">Sept 2023</span>
+                            <h4>Scientific Volunteer</h4>
+                            <p class="timeline-subtitle">"The Fourth State" Plasma Exhibition</p>
+                            <p class="timeline-desc">Volunteered as a scientific guide, explaining complex physics, plasma research concepts, and experimental models to visitors during the public exhibition.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section - Spotify Embed -->
+    <section class="music" id="music">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">My Music</span>
+                <h2 class="section-title">Listen to<br><span class="gradient-text">Popular Tracks</span></h2>
+            </div>
+            <div class="music-grid">
+                <div class="music-player-main" data-animate="fade-up" data-delay="100">
+                    <iframe 
+                        style="border-radius:16px" 
+                        src="https://open.spotify.com/embed/artist/6SaA1ADzXWprxPQKBVqjNL?utm_source=generator&theme=0" 
+                        width="100%" 
+                        height="352" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy"
+                        title="Robin R G on Spotify">
+                    </iframe>
+                </div>
+                <div class="music-tracks">
+                    <div class="track-card" data-animate="fade-up" data-delay="150">
+                        <div class="track-cover">
+                            <img src="https://i.scdn.co/image/ab67616d00001e025b33fa6edc53a729be06752c" alt="Sarva Nanmakalkum">
+                            <div class="track-play">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="track-info">
+                            <h3>Sarva Nanmakalkum</h3>
+                            <span>Freestyle · 2025</span>
+                        </div>
+                    </div>
+                    <div class="track-card" data-animate="fade-up" data-delay="200">
+                        <div class="track-cover">
+                            <img src="https://i.scdn.co/image/ab67616d00001e025d9e9e6119507e1dbff1a4b4" alt="Ebenesarae">
+                            <div class="track-play">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="track-info">
+                            <h3>Ebenesarae</h3>
+                            <span>Instrumental · 2023</span>
+                        </div>
+                    </div>
+                    <div class="track-card" data-animate="fade-up" data-delay="250">
+                        <div class="track-cover">
+                            <img src="https://i.scdn.co/image/ab67616d00001e024d995517e25eab1956f50c63" alt="Parishudhan Mahonnatha Devan">
+                            <div class="track-play">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="track-info">
+                            <h3>Parishudhan Mahonnatha Devan</h3>
+                            <span>Single · 2026</span>
+                        </div>
+                    </div>
+                    <div class="track-card" data-animate="fade-up" data-delay="300">
+                        <div class="track-cover">
+                            <img src="https://i.scdn.co/image/ab67616d00001e020946e7cd5020eb6f992b9697" alt="Paraparamesha">
+                            <div class="track-play">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="track-info">
+                            <h3>Paraparamesha</h3>
+                            <span>Instrumental · 2024</span>
+                        </div>
+                    </div>
+                    <div class="track-card" data-animate="fade-up" data-delay="350">
+                        <div class="track-cover">
+                            <img src="https://i.scdn.co/image/ab67616d00001e02843f7e520821c90f26d6b70d" alt="Flow like river">
+                            <div class="track-play">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="track-info">
+                            <h3>Flow Like River</h3>
+                            <span>Single · 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discography Section -->
+    <section class="discography" id="discography">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Discography</span>
+                <h2 class="section-title">All <span class="gradient-text">Releases</span></h2>
+            </div>
+            <div class="disco-timeline">
+                <div class="disco-item" data-animate="fade-up" data-delay="100">
+                    <div class="disco-year">2026</div>
+                    <div class="disco-card">
+                        <img src="https://i.scdn.co/image/ab67616d00001e024d995517e25eab1956f50c63" alt="Parishudhan Mahonnatha Devan" class="disco-cover">
+                        <div class="disco-info">
+                            <span class="disco-type">Single</span>
+                            <h3>Parishudhan Mahonnatha Devan</h3>
+                            <p>Latest release · Devotional</p>
+                            <a href="https://open.spotify.com/album/39rhMTmWDTzM6IcNwrmQhg" target="_blank" rel="noopener" class="disco-listen">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"/></svg>
+                                Play
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="disco-item" data-animate="fade-up" data-delay="150">
+                    <div class="disco-year">2025</div>
+                    <div class="disco-card">
+                        <img src="https://i.scdn.co/image/ab67616d00001e025b33fa6edc53a729be06752c" alt="Sarva Nanmakalkum" class="disco-cover">
+                        <div class="disco-info">
+                            <span class="disco-type">Single</span>
+                            <h3>Sarva Nanmakalkum (Freestyle)</h3>
+                            <p>Freestyle rendition</p>
+                            <a href="https://open.spotify.com/album/5Dk1PteijUexOFbi8ASxFU" target="_blank" rel="noopener" class="disco-listen">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"/></svg>
+                                Play
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="disco-item" data-animate="fade-up" data-delay="200">
+                    <div class="disco-year">2025</div>
+                    <div class="disco-card">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02bf389fa8b9054c094f21298e" alt="Lokamam Ghambira Varidhiyil" class="disco-cover">
+                        <div class="disco-info">
+                            <span class="disco-type">Single</span>
+                            <h3>Lokamam Ghambira Varidhiyil</h3>
+                            <p>Cover Version</p>
+                            <a href="https://open.spotify.com/album/6y9dInnHyU1efgv1A9tVZN" target="_blank" rel="noopener" class="disco-listen">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"/></svg>
+                                Play
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="disco-item" data-animate="fade-up" data-delay="250">
+                    <div class="disco-year">2024</div>
+                    <div class="disco-card">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02843f7e520821c90f26d6b70d" alt="Flow like river" class="disco-cover">
+                        <div class="disco-info">
+                            <span class="disco-type">Single</span>
+                            <h3>Flow Like River</h3>
+                            <p>Original composition</p>
+                            <a href="https://open.spotify.com/album/5rzcJtMHuh8vQS7Pysp7Do" target="_blank" rel="noopener" class="disco-listen">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"/></svg>
+                                Play
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="disco-item" data-animate="fade-up" data-delay="300">
+                    <div class="disco-year">2024</div>
+                    <div class="disco-card">
+                        <img src="https://i.scdn.co/image/ab67616d00001e020946e7cd5020eb6f992b9697" alt="Paraparamesha" class="disco-cover">
+                        <div class="disco-info">
+                            <span class="disco-type">Single</span>
+                            <h3>Paraparamesha</h3>
+                            <p>Instrumental Version</p>
+                            <a href="https://open.spotify.com/album/5GFaQUrUsOH44LZSbaKivp" target="_blank" rel="noopener" class="disco-listen">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"/></svg>
+                                Play
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="disco-item" data-animate="fade-up" data-delay="350">
+                    <div class="disco-year">2023</div>
+                    <div class="disco-card">
+                        <img src="https://i.scdn.co/image/ab67616d00001e02bb98b9cd21fc8a8045e7abed" alt="Ariyathe Ariyathe" class="disco-cover">
+                        <div class="disco-info">
+                            <span class="disco-type">Single</span>
+                            <h3>Ariyathe Ariyathe</h3>
+                            <p>Instrumental Version</p>
+                            <a href="https://open.spotify.com/album/6knlgwMNkUY1rnkMHtv6fk" target="_blank" rel="noopener" class="disco-listen">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"/></svg>
+                                Play
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="disco-item" data-animate="fade-up" data-delay="400">
+                    <div class="disco-year">2023</div>
+                    <div class="disco-card">
+                        <img src="https://i.scdn.co/image/ab67616d00001e025d9e9e6119507e1dbff1a4b4" alt="Ebenesarae" class="disco-cover">
+                        <div class="disco-info">
+                            <span class="disco-type">Single</span>
+                            <h3>Ebenesarae</h3>
+                            <p>Instrumental · 1,349 plays</p>
+                            <a href="https://open.spotify.com/album/5ThQP16WnhHnTBmYgaIn2b" target="_blank" rel="noopener" class="disco-listen">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"/></svg>
+                                Play
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                <p class="section-subtitle">Have a project in mind, want to collaborate on music, or just say hi?</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-socials" data-animate="fade-up" data-delay="100">
+                    <a href="https://open.spotify.com/artist/6SaA1ADzXWprxPQKBVqjNL" target="_blank" rel="noopener" class="social-card" id="spotifyCard">
+                        <div class="social-icon social-spotify">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                            </svg>
+                        </div>
+                        <div class="social-info">
+                            <h3>Spotify</h3>
+                            <span>Listen to my music</span>
+                        </div>
+                        <svg class="social-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                        </svg>
+                    </a>
+                    <a href="https://in.linkedin.com/in/robinrg" target="_blank" rel="noopener" class="social-card" id="linkedinCard">
+                        <div class="social-icon social-linkedin">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </div>
+                        <div class="social-info">
+                            <h3>LinkedIn</h3>
+                            <span>Professional network</span>
+                        </div>
+                        <svg class="social-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/me.robinrg/" target="_blank" rel="noopener" class="social-card" id="instagramCard">
+                        <div class="social-icon social-instagram">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                            </svg>
+                        </div>
+                        <div class="social-info">
+                            <h3>Instagram</h3>
+                            <span>@me.robinrg</span>
+                        </div>
+                        <svg class="social-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                        </svg>
+                    </a>
+                     <a href="https://www.youtube.com/@TheRobinRG" target="_blank" rel="noopener" class="social-card" id="youtubeCard">
+                        <div class="social-icon social-youtube">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </div>
+                        <div class="social-info">
+                            <h3>YouTube</h3>
+                            <span>@TheRobinRG</span>
+                        </div>
+                        <svg class="social-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17l9.2-9.2M17 17V7H7"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="contact-form-wrapper" data-animate="fade-up" data-delay="200">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="formName" placeholder=" " required>
+                            <label for="formName">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="formEmail" placeholder=" " required>
+                            <label for="formEmail">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="formMessage" rows="4" placeholder=" " required></textarea>
+                            <label for="formMessage">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            Send Message
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#hero" class="nav-logo">
+                        <span class="logo-r">R</span>obin<span class="logo-dot">.</span>
+                    </a>
+                    <p>Spreading God's glory through music and code.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#music">Music</a>
+                    <a href="#discography">Discography</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Robin R G. All rights reserved.</p>
+                <p class="footer-quote">✝️ "Music is God's best gift to man"</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

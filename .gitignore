@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+node_modules/
+.env
+.next/
+dist/
+build/
+.system_generated/
+*.log

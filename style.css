@@ -518,6 +518,96 @@ body:hover .cursor-glow {
     background: rgba(255, 255, 255, 0.03);
     padding: 8px 16px;
     border-radius: var(--radius-full);
+
+/* Followers Section */
+.followers {
+    padding: 80px 0;
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+}
+.followers-grid {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.follower-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px;
+    border-radius: var(--radius-lg);
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.follower-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+.follower-icon {
+    width: 48px;
+    height: 48px;
+    filter: invert(1) drop-shadow(0 0 4px rgba(255,255,255,0.6));
+}
+.follower-count {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+.follower-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Footer QR Code */
+.footer-qr {
+    margin-top: 24px;
+    text-align: center;
+}
+.footer-qr h4 {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+.footer-qr .qr-code {
+    width: 150px;
+    height: auto;
+}
+
+/* Designs Page */
+.designs {
+    padding: 80px 0;
+    background: var(--bg-glass);
+    backdrop-filter: blur(12px);
+}
+.designs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    justify-items: center;
+}
+.design-item img {
+    width: 100%;
+    border-radius: var(--radius-md);
+    transition: transform var(--transition-base);
+}
+.design-item img:hover {
+    transform: scale(1.03);
+}
+.coming-soon {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    color: transparent;
+}
     border: 1px solid var(--border-subtle);
     backdrop-filter: blur(10px);
 }

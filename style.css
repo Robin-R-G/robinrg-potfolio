@@ -586,35 +586,16 @@ body:hover .cursor-glow {
     border-radius: 8px;
 }
 
-/* Designs Page */
-.designs {
-    padding: 80px 0;
-    background: var(--bg-glass);
-    backdrop-filter: blur(12px);
-}
-.designs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 24px;
-    justify-items: center;
-}
-.design-item img {
-    width: 100%;
-    border-radius: var(--radius-md);
-    transition: transform var(--transition-base);
-}
-.design-item img:hover {
-    transform: scale(1.03);
-}
-.coming-soon {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 800;
-    background: linear-gradient(90deg, #ff7e5f, #feb47b);
-    -webkit-background-clip: text;
-    color: transparent;
-}
+/* Music Visualizer */
+.music-visualizer {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 24px;
+    margin-bottom: 24px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
     border: 1px solid var(--border-subtle);
     backdrop-filter: blur(10px);
 }

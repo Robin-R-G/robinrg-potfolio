@@ -332,9 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (data.followers !== undefined) {
                     setStatCount('github-followers', data.followers);
                 }
-                if (data.public_repos !== undefined) {
-                    setStatCount('github-repos', data.public_repos);
-                }
+
             }
         } catch (e) {
             console.warn('Could not fetch live GitHub stats:', e);

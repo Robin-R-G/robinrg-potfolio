@@ -332,19 +332,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (data.followers !== undefined) {
                     setStatCount('github-followers', data.followers);
                 }
+                if (data.public_repos !== undefined) {
+                    setStatCount('github-repos', data.public_repos);
+                }
 
             }
         } catch (e) {
             console.warn('Could not fetch live GitHub stats:', e);
         }
 
-        // Helper to fetch and parse via allorigins proxy
+        // Helper to fetch and parse via proxy (with fallback)
         async function fetchViaProxy(targetUrl) {
-            const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`;
-            const res = await fetch(proxyUrl);
-            if (!res.ok) throw new Error(`Proxy fetch failed for ${targetUrl}`);
-            const data = await res.json();
-            return data.contents;
+            try {
+                const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`;
+                const res = await fetch(proxyUrl);
+                if (!res.ok) throw new Error();
+                return await res.text();
+            } catch (e) {
+                // Fallback to allorigins raw
+                const fallbackUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
+                const res = await fetch(fallbackUrl);
+                if (!res.ok) throw new Error(`Proxy fetch failed for ${targetUrl}`);
+                return await res.text();
+            }
         }
 
         // 2. Spotify

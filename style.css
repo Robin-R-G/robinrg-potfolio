@@ -538,7 +538,8 @@ body:hover .cursor-glow {
     align-items: center;
     gap: 12px;
     padding: 24px 32px;
-    width: 220px;
+    width: 100%;
+    max-width: 220px;
     border-radius: var(--radius-lg);
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--border-subtle);
@@ -1526,6 +1527,25 @@ body:hover .cursor-glow {
     
     .section-title {
         font-size: 1.8rem;
+    }
+    
+    .follower-item {
+        padding: 20px 16px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .social-card {
+        padding: 14px 16px;
+        gap: 12px;
+    }
+    
+    .social-info h3 {
+        font-size: 1rem;
+    }
+    
+    .social-info span {
+        font-size: 0.8rem;
     }
     
     .about-tags {

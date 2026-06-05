@@ -565,7 +565,24 @@ body:hover .cursor-glow {
     letter-spacing: 0.05em;
 }
 
-/* Individual Brand Glow and Hover Styles */
+/* Individual Brand Neon Outline & Glow Styles */
+.follower-linkedin .follower-icon {
+    color: #0077B5;
+    filter: drop-shadow(0 0 2px rgba(0, 119, 181, 0.6)) drop-shadow(0 0 6px rgba(0, 119, 181, 0.3));
+}
+.follower-instagram .follower-icon {
+    color: #E4405F;
+    filter: drop-shadow(0 0 2px rgba(228, 64, 95, 0.6)) drop-shadow(0 0 6px rgba(228, 64, 95, 0.3));
+}
+.follower-youtube .follower-icon {
+    color: #FF0000;
+    filter: drop-shadow(0 0 2px rgba(255, 0, 0, 0.6)) drop-shadow(0 0 6px rgba(255, 0, 0, 0.3));
+}
+.follower-github .follower-icon {
+    color: #a78bfa;
+    filter: drop-shadow(0 0 2px rgba(167, 139, 250, 0.6)) drop-shadow(0 0 6px rgba(167, 139, 250, 0.3));
+}
+
 .follower-linkedin:hover {
     transform: translateY(-8px) scale(1.03);
     border-color: rgba(0, 119, 181, 0.4);
@@ -573,6 +590,8 @@ body:hover .cursor-glow {
     background: rgba(0, 119, 181, 0.03);
 }
 .follower-linkedin:hover .follower-icon {
+    color: #38bdf8;
+    filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.8)) drop-shadow(0 0 12px rgba(56, 189, 248, 0.5));
     transform: scale(1.15) rotate(5deg);
 }
 
@@ -583,6 +602,8 @@ body:hover .cursor-glow {
     background: rgba(228, 64, 95, 0.03);
 }
 .follower-instagram:hover .follower-icon {
+    color: #ff85a2;
+    filter: drop-shadow(0 0 4px rgba(255, 133, 162, 0.8)) drop-shadow(0 0 12px rgba(255, 133, 162, 0.5));
     transform: scale(1.15) rotate(-5deg);
 }
 
@@ -593,6 +614,8 @@ body:hover .cursor-glow {
     background: rgba(255, 0, 0, 0.03);
 }
 .follower-youtube:hover .follower-icon {
+    color: #ff4d4d;
+    filter: drop-shadow(0 0 4px rgba(255, 77, 77, 0.8)) drop-shadow(0 0 12px rgba(255, 77, 77, 0.5));
     transform: scale(1.15) rotate(5deg);
 }
 
@@ -603,12 +626,9 @@ body:hover .cursor-glow {
     background: rgba(139, 92, 246, 0.03);
 }
 .follower-github:hover .follower-icon {
+    color: #c4b5fd;
+    filter: drop-shadow(0 0 4px rgba(196, 181, 253, 0.8)) drop-shadow(0 0 12px rgba(196, 181, 253, 0.5));
     transform: scale(1.15) rotate(-5deg);
-}
-
-/* Make sure the GitHub icon (black path by default) shows up bright on dark background */
-.follower-github .follower-icon {
-    filter: brightness(0) invert(1);
 }
 
 

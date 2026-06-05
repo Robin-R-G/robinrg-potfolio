@@ -518,6 +518,9 @@ body:hover .cursor-glow {
     background: rgba(255, 255, 255, 0.03);
     padding: 8px 16px;
     border-radius: var(--radius-full);
+    border: 1px solid var(--border-subtle);
+    backdrop-filter: blur(10px);
+}
 
 /* Followers Section */
 .followers {
@@ -563,42 +566,8 @@ body:hover .cursor-glow {
     letter-spacing: 0.05em;
 }
 
-/* Footer QR Code */
-.footer-qr {
-    margin-top: 24px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-.footer-qr h4 {
-    margin-bottom: 0;
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-.footer-qr .qr-code {
-    width: 80px;
-    height: auto;
-    border-radius: 8px;
-}
 
-/* Music Visualizer */
-.music-visualizer {
-    display: inline-flex;
-    align-items: flex-end;
-    gap: 4px;
-    height: 24px;
-    margin-bottom: 24px;
-    background: rgba(255, 255, 255, 0.03);
-    padding: 8px 16px;
-    border-radius: var(--radius-full);
-    border: 1px solid var(--border-subtle);
-    backdrop-filter: blur(10px);
-}
+
 
 .music-visualizer .bar {
     width: 3px;

@@ -973,13 +973,14 @@ body:hover .cursor-glow {
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
     cursor: pointer;
-    transition: all var(--transition-base);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .track-card:hover {
-    background: rgba(139, 92, 246, 0.05);
-    border-color: var(--border-hover);
-    transform: translateX(8px);
+    background: rgba(139, 92, 246, 0.08);
+    border-color: var(--accent-primary);
+    transform: translateY(-4px) translateX(4px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.15);
 }
 
 .track-cover {
@@ -1023,6 +1024,11 @@ body:hover .cursor-glow {
     font-weight: 600;
     margin-bottom: 2px;
     color: var(--text-primary);
+    transition: color var(--transition-fast);
+}
+
+.track-card:hover .track-info h3 {
+    color: #c4b5fd;
 }
 
 .track-info span {

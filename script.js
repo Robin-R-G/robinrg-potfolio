@@ -310,4 +310,113 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // ── Live Stats Fetcher ──
+    function setStatCount(statKey, count) {
+        const elements = document.querySelectorAll(`[data-stat="${statKey}"]`);
+        elements.forEach(el => {
+            const oldTarget = parseInt(el.dataset.count);
+            if (oldTarget === count) return;
+            el.dataset.count = count;
+            if (el.textContent !== '0') {
+                animateCounter(el);
+            }
+        });
+    }
+
+    async function updateLiveStats() {
+        // 1. GitHub (Direct API fetch)
+        try {
+            const res = await fetch('https://api.github.com/users/Robin-R-G');
+            if (res.ok) {
+                const data = await res.json();
+                if (data.followers !== undefined) {
+                    setStatCount('github-followers', data.followers);
+                }
+                if (data.public_repos !== undefined) {
+                    setStatCount('github-repos', data.public_repos);
+                }
+            }
+        } catch (e) {
+            console.warn('Could not fetch live GitHub stats:', e);
+        }
+
+        // Helper to fetch and parse via allorigins proxy
+        async function fetchViaProxy(targetUrl) {
+            const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`;
+            const res = await fetch(proxyUrl);
+            if (!res.ok) throw new Error(`Proxy fetch failed for ${targetUrl}`);
+            const data = await res.json();
+            return data.contents;
+        }
+
+        // 2. Spotify
+        try {
+            const html = await fetchViaProxy('https://open.spotify.com/artist/6SaA1ADzXWprxPQKBVqjNL');
+            const followersMatch = html.match(/Artist\s*·\s*([\d,]+)\s*followers/i) || html.match(/"followers"\s*:\s*\{\s*"total"\s*:\s*(\d+)/i);
+            if (followersMatch) {
+                const count = parseInt(followersMatch[1].replace(/,/g, ''));
+                setStatCount('spotify-followers', count);
+            }
+            const listenersMatch = html.match(/([\d,]+)\s*monthly\s*listeners/i) || html.match(/"monthlyListeners"\s*:\s*(\d+)/i);
+            if (listenersMatch) {
+                const count = parseInt(listenersMatch[1].replace(/,/g, ''));
+                setStatCount('spotify-listeners', count);
+            }
+        } catch (e) {
+            console.warn('Could not fetch live Spotify stats:', e);
+        }
+
+        // 3. YouTube
+        try {
+            const html = await fetchViaProxy('https://www.youtube.com/@TheRobinRG');
+            const subMatch = html.match(/"subscriberCountText"\s*:\s*\{\s*"simpleText"\s*:\s*"([^"]+)"/i) || html.match(/([\d,.]+K?)\s*subscribers/i);
+            if (subMatch) {
+                let subsText = subMatch[1].replace(/subscribers/i, '').trim();
+                let subs = parseFloat(subsText.replace(/,/g, ''));
+                if (subsText.toLowerCase().includes('k')) {
+                    subs = Math.round(subs * 1000);
+                } else if (subsText.toLowerCase().includes('m')) {
+                    subs = Math.round(subs * 1000000);
+                }
+                if (!isNaN(subs)) {
+                    setStatCount('youtube-subscribers', subs);
+                }
+            }
+        } catch (e) {
+            console.warn('Could not fetch live YouTube stats:', e);
+        }
+
+        // 4. Instagram
+        try {
+            const html = await fetchViaProxy('https://www.instagram.com/me.robinrg/');
+            const followersMatch = html.match(/(?:content=["']|description" content=["'])([\d,.]+K?)\s*Followers/i) || html.match(/([\d,.]+K?)\s*Followers/i);
+            if (followersMatch) {
+                let followersText = followersMatch[1].trim();
+                let followers = parseFloat(followersText.replace(/,/g, ''));
+                if (followersText.toLowerCase().includes('k')) {
+                    followers = Math.round(followers * 1000);
+                }
+                if (!isNaN(followers)) {
+                    setStatCount('instagram-followers', followers);
+                }
+            }
+        } catch (e) {
+            console.warn('Could not fetch live Instagram stats:', e);
+        }
+
+        // 5. LinkedIn
+        try {
+            const html = await fetchViaProxy('https://in.linkedin.com/in/robinrg');
+            const connMatch = html.match(/([\d,]+)\s*followers/i) || html.match(/([\d,]+)\s*connections/i);
+            if (connMatch) {
+                const conns = parseInt(connMatch[1].replace(/,/g, ''));
+                setStatCount('linkedin-followers', conns);
+            }
+        } catch (e) {
+            console.warn('Could not fetch live LinkedIn stats:', e);
+        }
+    }
+
+    updateLiveStats();
+
 });

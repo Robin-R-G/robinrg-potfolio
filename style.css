@@ -525,8 +525,6 @@ body:hover .cursor-glow {
 /* Followers Section */
 .followers {
     padding: 80px 0;
-    background: var(--bg-glass);
-    backdrop-filter: blur(12px);
 }
 .followers-grid {
     display: flex;
